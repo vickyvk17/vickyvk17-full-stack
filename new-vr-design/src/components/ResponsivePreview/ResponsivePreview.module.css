@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e9ebee;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid #d1d1d1;
+  flex-shrink: 0;
+}
+
+.logo, .placeholder {
+  flex: 1;
+}
+
+.deviceIcons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.deviceIcons button {
+  background: none;
+  border: 2px solid transparent;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+.deviceIcons button:hover {
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+.deviceIcons .active {
+  background-color: #e0e7ff;
+  color: var(--primary-purple);
+}
+
+.previewContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.previewWindow {
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: max-width 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.desktop {
+  max-width: 100%;
+}
+.laptop {
+  max-width: 996px;
+}
+.tablet {
+  max-width: 768px;
+}
+.mobile {
+  max-width: 375px;
+}

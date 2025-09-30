@@ -1,0 +1,40 @@
+.wrapper {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.overlayContainer {
+  display: flex;
+  align-items: center;
+}
+.contentBox {
+  background-color: #fff;
+  padding: 4rem;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.subheading {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.contentBox h2 {
+  font-size: 3rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+.credit {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .overlayContainer {
+    justify-content: center;
+  }
+  .contentBox {
+    max-width: 90%;
+    flex-basis: 90%;
+    padding: 2.5rem;
+  }
+}

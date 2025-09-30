@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-purple: #6236e6;
+  --bg-light-gray: #f2f2f2;
+  --text-dark: #111111;
+  --text-dark-secondary: #555555;
+  --text-light: #ffffff;
+  --border-color: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--text-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+p {
+  line-height: 1.8;
+  color: var(--text-dark-secondary);
+  font-weight: 300;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.button-solid {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+  border: 2px solid var(--primary-purple);
+}
+.button-solid:hover {
+  background-color: #4f22c9;
+  border-color: #4f22c9;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
+}
+.button-outline:hover {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+}
+
+/* Add this code to the end of src/App.css */
+
+.grid-container {
+  display: grid;
+  /* Creates a 6-column grid */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Note: The default .container class inside your components 
+   might need its padding adjusted if it conflicts with the grid gap. */
+
+
+/* Your provided grid styles for different screen sizes */
+/* --- Mobile View --- */
+@media only screen and (max-width: 599px) {
+  .item1 { grid-column: 1 / -1; } 
+  .item2 { grid-column: 1 / -1; }
+  .item3 { grid-column: 1 / -1; }
+  .item4 { grid-column: 1 / -1; }
+  .item5 { grid-column: 1 / -1; }
+}
+
+/* --- Tablet View --- */
+@media only screen and (min-width: 600px) {
+  .item1 { grid-area: 1 / 1 / 2 / -1; } /* Row 1, spans all 6 columns */
+  .item2 { grid-area: 2 / 1 / 3 / 2; } /* Row 2, spans first column */
+  .item3 { grid-area: 2 / 2 / 3 / -1; } /* Row 2, spans last 5 columns (Corrected from 4) */
+  .item4 { grid-area: 3 / 1 / 4 / -1; } /* Row 3, spans all 6 columns */
+  .item5 { grid-area: 4 / 1 / 5 / -1; } /* Row 4, spans all 6 columns */
+}
+
+/* --- Desktop View --- */
+@media only screen and (min-width: 768px) {
+  .item1 { grid-area: 1 / 1 / 2 / -1; } /* Row 1, spans all 6 columns */
+  .item2 { grid-area: 2 / 1 / 3 / 2; } /* Row 2, spans first column (Sidebar) */
+  .item3 { grid-area: 2 / 2 / 3 / 6; } /* Row 2, spans middle 4 columns (Main Content) */
+  .item4 { grid-area: 2 / 6 / 3 / -1; } /* Row 2, spans last column (Sidebar) */
+  .item5 { grid-area: 3 / 1 / 4 / -1; } /* Row 3, spans all 6 columns */
+}
+
+.item2, .item4 {
+  background-color: var(--bg-light-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  height: fit-content;
+}

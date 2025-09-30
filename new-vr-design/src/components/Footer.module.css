@@ -1,0 +1,11 @@
+.mainFooter {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+.mainFooter h2 { font-size: 3rem; color: var(--text-light); }
+.line { width: 100px; height: 3px; background-color: #fff; margin: 1.5rem auto 2rem auto; }
+.socialIcons a { color: var(--text-light); font-size: 1.25rem; margin: 0 1rem; }
+.subFooter { background-color: #333333; color: #aaaaaa; padding: 3rem 1.5rem; text-align: center; font-size: 0.9rem; }
+.link { color: #aaaaaa; }

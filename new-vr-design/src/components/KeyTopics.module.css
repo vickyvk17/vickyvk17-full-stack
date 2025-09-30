@@ -1,0 +1,11 @@
+.keyTopics { display: flex; gap: 4rem; align-items: flex-start; }
+.column { flex: 1; }
+.column h3 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.5rem; }
+.lightText { font-family: 'Poppins', sans-serif; font-weight: 300 !important; font-size: 3.5rem; }
+.chatLink { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--primary-purple); font-weight: bold; }
+
+@media (max-width: 768px) {
+  .keyTopics {
+    flex-direction: column;
+  }
+}

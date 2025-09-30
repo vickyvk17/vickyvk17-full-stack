@@ -1,0 +1,9 @@
+.wrapper { background-color: var(--bg-light-gray); text-align: center;}
+.title { font-size: 3rem; margin-bottom: 1rem;}
+.subtitle { max-width: 600px; margin: 0 auto 3rem auto; }
+.listContainer { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+.listItem { display: flex; align-items: flex-start; gap: 2rem; padding: 2rem; text-align: left; background: #fff; }
+.highlighted { background: var(--primary-purple); color: var(--text-light); }
+.highlighted p { color: var(--text-light); }
+.number { font-family: 'Roboto', sans-serif; font-size: 4rem; font-weight: 700; color: var(--primary-purple); flex-shrink: 0; line-height: 1; }
+.highlighted .number { color: #fff; }

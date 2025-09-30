@@ -1,0 +1,63 @@
+
+.hero {
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+  gap: 2rem;
+}
+
+.textContainer {
+  width: 100%;
+}
+
+.imageContainer {
+  display: block; 
+  width: 100%;
+}
+
+.line {
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary-purple);
+  margin-bottom: 2rem;
+}
+
+.textContainer h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.textContainer p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.credit {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* --- TABLET & DESKTOP STYLES --- */
+/* This media query applies ONLY to screens 600px or wider */
+@media (min-width: 600px) {
+  .hero {
+    flex-direction: row; /* Change to side-by-side */
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .textContainer {
+    flex: 1;
+  }
+  
+  .imageContainer {
+    flex: 1;
+  }
+}
